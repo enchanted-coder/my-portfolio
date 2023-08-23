@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #282828;
+    background-color: #1d2021;
     color: #f9f5d7;
     margin: 0;
     padding: 0;
@@ -8,23 +8,23 @@ body {
 
 /*dark mode */
 body.dark-mode {
-    background-color: #282828;
+    background-color: #1d2021;
     color: #f9f5d7;
 }
 
 /*light mode */
 body.light-mode {
-    background-color: #f9f5d7;
-    color: #282828;
+    background-color: #ebdbb2;
+    
 }
 
 .light-mode {
-    background-color: #ffffff;
-    color: #121212;
+    background-color: #fbf1c7;
+    
 }
 
 header {
-    background-color: #1d2021;
+    background-color: #282828;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -93,7 +93,7 @@ main {
 }
 
 #project-details {
-    background-color: #1f1f1f;
+    background-color: #282828;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
