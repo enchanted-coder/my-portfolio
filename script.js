@@ -4,6 +4,34 @@ const projectTitle = projectDetails.querySelector("h2");
 const projectDescription = projectDetails.querySelector("#project-description");
 const projectLink = projectDetails.querySelector("#project-link");
 
+const toggleSwitch = document.getElementById("toggle");
+const body = document.body;
+
+toggleSwitch.addEventListener("change", switchTheme);
+
+// theme switcher
+function switchTheme() {
+    if (toggleSwitch.checked) {
+        setLightTheme();
+    } else {
+        setDarkTheme();
+    }
+}
+
+const setDarkTheme = () => {
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+    projectDetails.classList.remove("light-mode");
+    projectDetails.classList.add("dark-mode");
+}
+
+const setLightTheme = () => {
+    body.classList.remove("dark-mode");
+    body.classList.add("light-mode");
+    projectDetails.classList.remove("dark-mode");
+    projectDetails.classList.add("light-mode");
+}
+
 // display projects in the navigation
 function displayProjects() {
     projects.forEach((project, index) => {

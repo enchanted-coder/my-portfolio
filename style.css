@@ -1,13 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #282828;
+    color: #f9f5d7;
     margin: 0;
     padding: 0;
 }
 
+/*dark mode */
+body.dark-mode {
+    background-color: #282828;
+    color: #f9f5d7;
+}
+
+/*light mode */
+body.light-mode {
+    background-color: #f9f5d7;
+    color: #282828;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #121212;
+}
+
 header {
-    background-color: #1f1f1f;
+    background-color: #1d2021;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -16,6 +33,44 @@ header {
 
 h1 {
     margin: 0;
+}
+
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-label:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle-input:checked + .toggle-label {
+    background-color: #8af4f4;
+}
+
+.toggle-input:checked + .toggle-label:before {
+    transform: translateX(20px);
 }
 
 nav ul {
